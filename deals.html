@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deals & Offers - Ragam Electricals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <div class="container">
+        <div class="top-bar-left">
+            <span><i class="fas fa-phone"></i> +91 9746478850</span>
+            <span><i class="fas fa-envelope"></i> ragamelectricals@gmail.com</span>
+        </div>
+        <div class="top-bar-right">
+            <span><i class="fas fa-truck"></i> Free Shipping on Orders Above ₹500</span>
+        </div>
+    </div>
+</div>
+
+<!-- Main Header -->
+<header class="main-header">
+    <div class="container">
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>Ragam Electricals</span>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" placeholder="Search for electrical & plumbing products..." id="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="search-suggestions" id="search-suggestions"></div>
+            </div>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <div class="action-item" onclick="window.location.href='account.html'">
+                    <i class="fas fa-user"></i>
+                    <span>Account</span>
+                </div>
+                <div class="action-item" onclick="window.location.href='wishlist.html'">
+                    <i class="fas fa-heart"></i>
+                    <span>Wishlist</span>
+                    <span class="badge" id="wishlist-count">0</span>
+                </div>
+                <div class="action-item cart-icon" onclick="window.location.href='cart.html'">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
+                    <span class="badge" id="cart-count">0</span>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation Menu -->
+<nav class="main-nav">
+    <div class="container">
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-th-large"></i>
+                    All Categories
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu mega-menu">
+                    <div class="mega-menu-content">
+                        <div class="menu-column">
+                            <h4>Electrical</h4>
+                            <ul>
+                                <li><a href="products.html?category=led-bulbs">LED Bulbs</a></li>
+                                <li><a href="products.html?category=tube-lights">Tube Lights</a></li>
+                                <li><a href="products.html?category=ceiling-fans">Ceiling Fans</a></li>
+                                <li><a href="products.html?category=modular-switches">Switches & Sockets</a></li>
+                                <li><a href="products.html?category=house-wires">Wires & Cables</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h4>Plumbing</h4>
+                            <ul>
+                                <li><a href="products.html?category=pipes">Pipes & Fittings</a></li>
+                                <li><a href="products.html?category=valves">Valves & Taps</a></li>
+                                <li><a href="products.html?category=pumps">Water Pumps</a></li>
+                                <li><a href="products.html?category=tanks">Water Tanks</a></li>
+                                <li><a href="products.html?category=drainage">Drainage Systems</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h4>Bathroom & Sanitary</h4>
+                            <ul>
+                                <li><a href="products.html?category=toilets">Toilets & Seats</a></li>
+                                <li><a href="products.html?category=basins">Wash Basins</a></li>
+                                <li><a href="products.html?category=showers">Showers & Faucets</a></li>
+                                <li><a href="products.html?category=accessories">Bathroom Accessories</a></li>
+                                <li><a href="products.html?category=mirrors">Mirrors & Cabinets</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h4>Kitchen & Utilities</h4>
+                            <ul>
+                                <li><a href="products.html?category=kitchen-sinks">Kitchen Sinks</a></li>
+                                <li><a href="products.html?category=kitchen-taps">Kitchen Taps</a></li>
+                                <li><a href="products.html?category=water-heaters">Water Heaters</a></li>
+                                <li><a href="products.html?category=tools">Tools & Hardware</a></li>
+                                <li><a href="products.html?category=safety">Safety Equipment</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h4>Featured</h4>
+                            <ul>
+                                <li><a href="products.html?category=smart-home">Smart Home</a></li>
+                                <li><a href="products.html?category=solar">Solar Products</a></li>
+                                <li><a href="products.html?category=new-arrivals">New Arrivals</a></li>
+                                <li><a href="deals.html">Special Offers</a></li>
+                                <li><a href="products.html?category=bulk">Bulk Orders</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+            <li class="nav-item"><a href="brands.html" class="nav-link">Brands</a></li>
+            <li class="nav-item"><a href="deals.html" class="nav-link active">Deals</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Deals & Offers</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Deals Hero Section -->
+    <section class="deals-hero">
+        <div class="container">
+            <div class="deals-hero-content">
+                <h1>🔥 Hot Deals & Special Offers</h1>
+                <p>Save big on premium electrical products with our exclusive deals and limited-time offers</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Active Deals</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">Up to 70%</span>
+                        <span class="stat-label">Discount</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Deal Updates</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Sale Section -->
+    <section class="flash-sale-section">
+        <div class="container">
+            <div class="flash-sale-header">
+                <div class="flash-sale-title">
+                    <i class="fas fa-bolt"></i>
+                    <h2>⚡ Flash Sale</h2>
+                    <span class="flash-badge">Limited Time</span>
+                </div>
+                <div class="flash-timer" id="flash-timer">
+                    <div class="timer-unit">
+                        <span class="timer-number" id="hours">12</span>
+                        <span class="timer-label">Hours</span>
+                    </div>
+                    <div class="timer-unit">
+                        <span class="timer-number" id="minutes">34</span>
+                        <span class="timer-label">Minutes</span>
+                    </div>
+                    <div class="timer-unit">
+                        <span class="timer-number" id="seconds">56</span>
+                        <span class="timer-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flash-deals-grid" id="flash-deals-grid">
+                <!-- Flash deals will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Deal Categories Section -->
+    <section class="deal-categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop Deals by Category</h2>
+                <p>Find amazing discounts across all product categories</p>
+            </div>
+            <div class="deal-categories-tabs">
+                <button class="deal-tab active" data-category="all">All Deals</button>
+                <button class="deal-tab" data-category="lighting">Lighting</button>
+                <button class="deal-tab" data-category="electrical">Electrical</button>
+                <button class="deal-tab" data-category="plumbing">Plumbing</button>
+                <button class="deal-tab" data-category="bathroom">Bathroom</button>
+                <button class="deal-tab" data-category="kitchen">Kitchen</button>
+            </div>
+            <div class="deals-grid" id="deals-grid">
+                <!-- Deals will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="special-offers-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Special Offers</h2>
+                <p>Exclusive deals and promotional offers</p>
+            </div>
+            <div class="offers-grid">
+                <div class="offer-card bulk-order">
+                    <div class="offer-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Bulk Order Discount</h3>
+                        <p>Get up to 15% off on orders above ₹10,000</p>
+                        <div class="offer-code">Code: BULK15</div>
+                    </div>
+                    <button class="copy-code-btn" onclick="copyCode('BULK15')">Copy Code</button>
+                </div>
+                <div class="offer-card first-order">
+                    <div class="offer-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <div class="offer-content">
+                        <h3>First Order Special</h3>
+                        <p>New customers get 20% off on first purchase</p>
+                        <div class="offer-code">Code: WELCOME20</div>
+                    </div>
+                    <button class="copy-code-btn" onclick="copyCode('WELCOME20')">Copy Code</button>
+                </div>
+                <div class="offer-card free-shipping">
+                    <div class="offer-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Free Shipping</h3>
+                        <p>Free delivery on all orders above ₹500</p>
+                        <div class="offer-code">Auto Applied</div>
+                    </div>
+                    <button class="copy-code-btn disabled">No Code Needed</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Never Miss a Deal!</h2>
+                    <p>Subscribe to our newsletter and be the first to know about exclusive offers and flash sales</p>
+                </div>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" id="newsletter-email">
+                    <button class="subscribe-btn" onclick="subscribeNewsletter()">
+                        <i class="fas fa-bell"></i>
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>Ragam Electricals</span>
+                    </div>
+                    <p>Your trusted partner for all electrical needs. We provide high-quality electrical products and solutions for homes and businesses.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=lighting">Lighting</a></li>
+                        <li><a href="products.html?category=fans">Fans & Appliances</a></li>
+                        <li><a href="products.html?category=switches">Switches & Sockets</a></li>
+                        <li><a href="products.html?category=wires">Wires & Cables</a></li>
+                        <li><a href="products.html?category=tools">Tools & Equipment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kulamada, Parippally</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9746478850</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>ragamelectricals@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 9AM - 7PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 Ragam Electricals. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="cart.js"></script>
+<script src="deals.js"></script>
+</body>
+</html>

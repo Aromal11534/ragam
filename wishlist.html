@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist - Ragam Electricals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <div class="container">
+        <div class="top-bar-left">
+            <span><i class="fas fa-phone"></i> +91 9746478850</span>
+            <span><i class="fas fa-envelope"></i> ragamelectricals@gmail.com</span>
+        </div>
+        <div class="top-bar-right">
+            <span><i class="fas fa-truck"></i> Free Shipping on Orders Above ₹500</span>
+        </div>
+    </div>
+</div>
+
+<!-- Main Header -->
+<header class="main-header">
+    <div class="container">
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>Ragam Electricals</span>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" placeholder="Search for electrical products..." id="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="search-suggestions" id="search-suggestions"></div>
+            </div>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <div class="action-item" onclick="window.location.href='account.html'">
+                    <i class="fas fa-user"></i>
+                    <span>Account</span>
+                </div>
+                <div class="action-item active">
+                    <i class="fas fa-heart"></i>
+                    <span>Wishlist</span>
+                    <span class="badge" id="wishlist-count">0</span>
+                </div>
+                <div class="action-item cart-icon" onclick="window.location.href='cart.html'">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
+                    <span class="badge" id="cart-count">0</span>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation Menu -->
+<nav class="main-nav">
+    <div class="container">
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-th-large"></i>
+                    All Categories
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu mega-menu">
+                    <div class="mega-menu-content">
+                        <div class="menu-column">
+                            <h4>Lighting</h4>
+                            <ul>
+                                <li><a href="products.html?category=led-bulbs">LED Bulbs</a></li>
+                                <li><a href="products.html?category=tube-lights">Tube Lights</a></li>
+                                <li><a href="products.html?category=ceiling-lights">Ceiling Lights</a></li>
+                                <li><a href="products.html?category=outdoor-lights">Outdoor Lights</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h4>Fans & Appliances</h4>
+                            <ul>
+                                <li><a href="products.html?category=ceiling-fans">Ceiling Fans</a></li>
+                                <li><a href="products.html?category=exhaust-fans">Exhaust Fans</a></li>
+                                <li><a href="products.html?category=table-fans">Table Fans</a></li>
+                                <li><a href="products.html?category=air-coolers">Air Coolers</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h4>Switches & Sockets</h4>
+                            <ul>
+                                <li><a href="products.html?category=modular-switches">Modular Switches</a></li>
+                                <li><a href="products.html?category=power-sockets">Power Sockets</a></li>
+                                <li><a href="products.html?category=switchboards">Switchboards</a></li>
+                                <li><a href="products.html?category=mcb">MCB & RCCB</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h4>Wires & Cables</h4>
+                            <ul>
+                                <li><a href="products.html?category=house-wires">House Wires</a></li>
+                                <li><a href="products.html?category=flexible-cables">Flexible Cables</a></li>
+                                <li><a href="products.html?category=coaxial-cables">Coaxial Cables</a></li>
+                                <li><a href="products.html?category=extension-cords">Extension Cords</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+            <li class="nav-item"><a href="brands.html" class="nav-link">Brands</a></li>
+            <li class="nav-item"><a href="deals.html" class="nav-link">Deals</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>My Wishlist</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Wishlist Section -->
+    <section class="wishlist-section">
+        <div class="container">
+            <div class="wishlist-header">
+                <div class="header-content">
+                    <h1><i class="fas fa-heart"></i> My Wishlist</h1>
+                    <p>Save your favorite electrical products for later</p>
+                </div>
+                <div class="wishlist-actions">
+                    <div class="view-options">
+                        <button class="view-btn active" data-view="grid" onclick="toggleWishlistView('grid')">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button class="view-btn" data-view="list" onclick="toggleWishlistView('list')">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                    <div class="sort-options">
+                        <select id="wishlist-sort" onchange="sortWishlist(this.value)">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="name">Name A-Z</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wishlist-content" id="wishlist-content">
+                <!-- Wishlist items will be loaded here -->
+            </div>
+
+            <!-- Wishlist Statistics -->
+            <div class="wishlist-stats" id="wishlist-stats" style="display: none;">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number" id="total-items">0</span>
+                            <span class="stat-label">Items</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-rupee-sign"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number" id="total-value">₹0</span>
+                            <span class="stat-label">Total Value</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number" id="potential-savings">₹0</span>
+                            <span class="stat-label">Potential Savings</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number" id="avg-days">0</span>
+                            <span class="stat-label">Avg. Days Saved</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wishlist Actions Section -->
+    <section class="wishlist-actions-section" id="wishlist-actions-section" style="display: none;">
+        <div class="container">
+            <div class="actions-grid">
+                <div class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="action-content">
+                        <h3>Add All to Cart</h3>
+                        <p>Move all wishlist items to your shopping cart</p>
+                        <button class="action-btn" onclick="addAllToCart()">
+                            <i class="fas fa-cart-plus"></i>
+                            Add All to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div class="action-content">
+                        <h3>Share Wishlist</h3>
+                        <p>Share your wishlist with friends and family</p>
+                        <button class="action-btn" onclick="shareWishlist()">
+                            <i class="fas fa-share"></i>
+                            Share Wishlist
+                        </button>
+                    </div>
+                </div>
+                <div class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <div class="action-content">
+                        <h3>Export Wishlist</h3>
+                        <p>Download your wishlist as PDF or CSV</p>
+                        <button class="action-btn" onclick="exportWishlist()">
+                            <i class="fas fa-file-export"></i>
+                            Export List
+                        </button>
+                    </div>
+                </div>
+                <div class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="action-content">
+                        <h3>Price Alerts</h3>
+                        <p>Get notified when prices drop on wishlist items</p>
+                        <button class="action-btn" onclick="setupPriceAlerts()">
+                            <i class="fas fa-bell-slash"></i>
+                            Enable Alerts
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Products Section -->
+    <section class="recommended-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>You Might Also Like</h2>
+                <p>Based on your wishlist preferences</p>
+            </div>
+            <div class="recommended-grid" id="recommended-grid">
+                <!-- Recommended products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Wishlist Benefits Section -->
+    <section class="wishlist-benefits-section">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Save Favorites</h3>
+                        <p>Keep track of products you love</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Price Alerts</h3>
+                        <p>Get notified of price drops</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Easy Sharing</h3>
+                        <p>Share lists with others</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Quick Purchase</h3>
+                        <p>Add multiple items to cart</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>Ragam Electricals</span>
+                    </div>
+                    <p>Your trusted partner for all electrical needs. We provide high-quality electrical products and solutions for homes and businesses.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=lighting">Lighting</a></li>
+                        <li><a href="products.html?category=fans">Fans & Appliances</a></li>
+                        <li><a href="products.html?category=switches">Switches & Sockets</a></li>
+                        <li><a href="products.html?category=wires">Wires & Cables</a></li>
+                        <li><a href="products.html?category=tools">Tools & Equipment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kulamada, Parippally</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9746478850</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>ragamelectricals@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 9AM - 7PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 Ragam Electricals. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="cart.js"></script>
+<script src="wishlist.js"></script>
+</body>
+</html>

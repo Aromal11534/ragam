@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Ragam Electricals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <div class="container">
+        <div class="top-bar-left">
+            <span><i class="fas fa-phone"></i> +91 9746478850</span>
+            <span><i class="fas fa-envelope"></i> ragamelectricals@gmail.com</span>
+        </div>
+        <div class="top-bar-right">
+            <span><i class="fas fa-truck"></i> Free Shipping on Orders Above ₹500</span>
+        </div>
+    </div>
+</div>
+
+<!-- Main Header -->
+<header class="main-header">
+    <div class="container">
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>Ragam Electricals</span>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" placeholder="Search for electrical products..." id="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="search-suggestions" id="search-suggestions"></div>
+            </div>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <div class="action-item" onclick="window.location.href='account.html'">
+                    <i class="fas fa-user"></i>
+                    <span>Account</span>
+                </div>
+                <div class="action-item" onclick="window.location.href='wishlist.html'">
+                    <i class="fas fa-heart"></i>
+                    <span>Wishlist</span>
+                    <span class="badge" id="wishlist-count">0</span>
+                </div>
+                <div class="action-item cart-icon" onclick="window.location.href='cart.html'">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
+                    <span class="badge" id="cart-count">0</span>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation Menu -->
+<nav class="main-nav">
+    <div class="container">
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-th-large"></i>
+                    All Categories
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu mega-menu">
+                    <div class="mega-menu-content">
+                        <div class="menu-column">
+                            <h4>Lighting</h4>
+                            <ul>
+                                <li><a href="products.html?category=led-bulbs">LED Bulbs</a></li>
+                                <li><a href="products.html?category=tube-lights">Tube Lights</a></li>
+                                <li><a href="products.html?category=ceiling-lights">Ceiling Lights</a></li>
+                                <li><a href="products.html?category=outdoor-lights">Outdoor Lights</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h4>Fans & Appliances</h4>
+                            <ul>
+                                <li><a href="products.html?category=ceiling-fans">Ceiling Fans</a></li>
+                                <li><a href="products.html?category=exhaust-fans">Exhaust Fans</a></li>
+                                <li><a href="products.html?category=table-fans">Table Fans</a></li>
+                                <li><a href="products.html?category=air-coolers">Air Coolers</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h4>Switches & Sockets</h4>
+                            <ul>
+                                <li><a href="products.html?category=modular-switches">Modular Switches</a></li>
+                                <li><a href="products.html?category=power-sockets">Power Sockets</a></li>
+                                <li><a href="products.html?category=switchboards">Switchboards</a></li>
+                                <li><a href="products.html?category=mcb">MCB & RCCB</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h4>Wires & Cables</h4>
+                            <ul>
+                                <li><a href="products.html?category=house-wires">House Wires</a></li>
+                                <li><a href="products.html?category=flexible-cables">Flexible Cables</a></li>
+                                <li><a href="products.html?category=coaxial-cables">Coaxial Cables</a></li>
+                                <li><a href="products.html?category=extension-cords">Extension Cords</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+            <li class="nav-item"><a href="brands.html" class="nav-link">Brands</a></li>
+            <li class="nav-item"><a href="deals.html" class="nav-link">Deals</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>About Us</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1>About Ragam Electricals</h1>
+                <p>Your trusted partner for all electrical needs since our establishment. We are committed to providing high-quality electrical products and exceptional service to our customers.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5000+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Products</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="our-story-section">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2>Our Story</h2>
+                    <p>Ragam Electricals was founded with a simple mission: to provide reliable, high-quality electrical products and services to homes and businesses in our community. What started as a small local shop has grown into a trusted name in the electrical industry.</p>
+                    <p>Over the years, we have built strong relationships with leading manufacturers and suppliers, ensuring that our customers have access to the latest and most reliable electrical products. Our commitment to quality, competitive pricing, and exceptional customer service has made us the preferred choice for electrical needs.</p>
+                    <p>Today, we continue to evolve with the changing technology landscape, offering smart electrical solutions, energy-efficient products, and expert installation services. Our team of experienced professionals is dedicated to helping you find the right electrical solutions for your specific needs.</p>
+                </div>
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Our electrical shop" loading="lazy">
+                    <div class="image-overlay">
+                        <div class="overlay-content">
+                            <h3>Visit Our Store</h3>
+                            <p>Experience our wide range of products firsthand</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Information Section -->
+    <section class="shop-info-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop Information</h2>
+                <p>Everything you need to know about our store and services</p>
+            </div>
+            <div class="shop-info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Location</h3>
+                        <p>Kulamada, Parippally<br>Kerala, India</p>
+                        <div class="info-details">
+                            <span><i class="fas fa-car"></i> Easy parking available</span>
+                            <span><i class="fas fa-bus"></i> Public transport accessible</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Business Hours</h3>
+                        <div class="hours-list">
+                            <div class="hour-item">
+                                <span>Monday - Friday</span>
+                                <span>9:00 AM - 7:00 PM</span>
+                            </div>
+                            <div class="hour-item">
+                                <span>Saturday</span>
+                                <span>9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="hour-item">
+                                <span>Sunday</span>
+                                <span>Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Services</h3>
+                        <ul class="services-list">
+                            <li><i class="fas fa-check"></i> Product Sales</li>
+                            <li><i class="fas fa-check"></i> Installation Services</li>
+                            <li><i class="fas fa-check"></i> Technical Support</li>
+                            <li><i class="fas fa-check"></i> Bulk Orders</li>
+                            <li><i class="fas fa-check"></i> Home Delivery</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Certifications</h3>
+                        <div class="certifications">
+                            <div class="cert-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>ISI Certified Products</span>
+                            </div>
+                            <div class="cert-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Quality Assured</span>
+                            </div>
+                            <div class="cert-item">
+                                <i class="fas fa-handshake"></i>
+                                <span>Authorized Dealer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision-section">
+        <div class="container">
+            <div class="mission-vision-grid">
+                <div class="mission-card">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To provide high-quality electrical products and services that meet the evolving needs of our customers while maintaining the highest standards of safety, reliability, and customer satisfaction.</p>
+                </div>
+                <div class="vision-card">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be the leading electrical products retailer in our region, known for our expertise, quality products, competitive prices, and exceptional customer service.</p>
+                </div>
+                <div class="values-card">
+                    <div class="card-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Our Values</h3>
+                    <ul>
+                        <li>Quality & Reliability</li>
+                        <li>Customer Satisfaction</li>
+                        <li>Integrity & Trust</li>
+                        <li>Innovation & Growth</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Ragam Electricals?</h2>
+                <p>Discover what makes us the preferred choice for electrical needs</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Quality Products</h3>
+                    <p>We source our products from trusted manufacturers and ensure all items meet the highest quality standards.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>Competitive Prices</h3>
+                    <p>Our strong supplier relationships allow us to offer competitive prices without compromising on quality.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Expert Team</h3>
+                    <p>Our knowledgeable staff provides expert advice and technical support to help you make the right choices.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick and reliable delivery service to get your electrical products when and where you need them.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Installation Service</h3>
+                    <p>Professional installation services by certified electricians for safe and proper setup.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support for any queries, issues, or emergency electrical needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>Ragam Electricals</span>
+                    </div>
+                    <p>Your trusted partner for all electrical needs. We provide high-quality electrical products and solutions for homes and businesses.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=lighting">Lighting</a></li>
+                        <li><a href="products.html?category=fans">Fans & Appliances</a></li>
+                        <li><a href="products.html?category=switches">Switches & Sockets</a></li>
+                        <li><a href="products.html?category=wires">Wires & Cables</a></li>
+                        <li><a href="products.html?category=tools">Tools & Equipment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kulamada, Parippally</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9746478850</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>ragamelectricals@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 9AM - 7PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 Ragam Electricals. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="cart.js"></script>
+<script src="about.js"></script>
+</body>
+</html>

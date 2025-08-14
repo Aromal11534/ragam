@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands - Ragam Electricals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <div class="container">
+        <div class="top-bar-left">
+            <span><i class="fas fa-phone"></i> +91 9746478850</span>
+            <span><i class="fas fa-envelope"></i> ragamelectricals@gmail.com</span>
+        </div>
+        <div class="top-bar-right">
+            <span><i class="fas fa-truck"></i> Free Shipping on Orders Above ₹500</span>
+        </div>
+    </div>
+</div>
+
+<!-- Main Header -->
+<header class="main-header">
+    <div class="container">
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>Ragam Electricals</span>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" placeholder="Search for electrical & plumbing products..." id="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="search-suggestions" id="search-suggestions"></div>
+            </div>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <div class="action-item" onclick="window.location.href='account.html'">
+                    <i class="fas fa-user"></i>
+                    <span>Account</span>
+                </div>
+                <div class="action-item" onclick="window.location.href='wishlist.html'">
+                    <i class="fas fa-heart"></i>
+                    <span>Wishlist</span>
+                    <span class="badge" id="wishlist-count">0</span>
+                </div>
+                <div class="action-item cart-icon" onclick="window.location.href='cart.html'">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
+                    <span class="badge" id="cart-count">0</span>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation Menu -->
+<nav class="main-nav">
+    <div class="container">
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-th-large"></i>
+                    All Categories
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu mega-menu">
+                    <div class="mega-menu-content">
+                        <div class="menu-column">
+                            <h4>Lighting</h4>
+                            <ul>
+                                <li><a href="products.html?category=led-bulbs">LED Bulbs</a></li>
+                                <li><a href="products.html?category=tube-lights">Tube Lights</a></li>
+                                <li><a href="products.html?category=ceiling-lights">Ceiling Lights</a></li>
+                                <li><a href="products.html?category=outdoor-lights">Outdoor Lights</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h4>Fans & Appliances</h4>
+                            <ul>
+                                <li><a href="products.html?category=ceiling-fans">Ceiling Fans</a></li>
+                                <li><a href="products.html?category=exhaust-fans">Exhaust Fans</a></li>
+                                <li><a href="products.html?category=table-fans">Table Fans</a></li>
+                                <li><a href="products.html?category=air-coolers">Air Coolers</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h4>Switches & Sockets</h4>
+                            <ul>
+                                <li><a href="products.html?category=modular-switches">Modular Switches</a></li>
+                                <li><a href="products.html?category=power-sockets">Power Sockets</a></li>
+                                <li><a href="products.html?category=switchboards">Switchboards</a></li>
+                                <li><a href="products.html?category=mcb">MCB & RCCB</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-column">
+                            <h4>Wires & Cables</h4>
+                            <ul>
+                                <li><a href="products.html?category=house-wires">House Wires</a></li>
+                                <li><a href="products.html?category=flexible-cables">Flexible Cables</a></li>
+                                <li><a href="products.html?category=coaxial-cables">Coaxial Cables</a></li>
+                                <li><a href="products.html?category=extension-cords">Extension Cords</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+            <li class="nav-item"><a href="brands.html" class="nav-link active">Brands</a></li>
+            <li class="nav-item"><a href="deals.html" class="nav-link">Deals</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Brands</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Brands Hero Section -->
+    <section class="brands-hero">
+        <div class="container">
+            <div class="brands-hero-content">
+                <h1>Trusted Electrical Brands</h1>
+                <p>We partner with the world's leading electrical manufacturers to bring you the highest quality products</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Brands Section -->
+    <section class="featured-brands-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Premium Partners</h2>
+                <p>Discover products from industry-leading brands</p>
+            </div>
+            <div class="brands-grid" id="brands-grid">
+                <!-- Brands will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Categories Section -->
+    <section class="brand-categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop by Brand Category</h2>
+                <p>Find your favorite brands by product category</p>
+            </div>
+            <div class="brand-categories">
+                <div class="brand-category-card" data-category="lighting">
+                    <div class="category-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Lighting Brands</h3>
+                    <p>Premium lighting solutions from top manufacturers</p>
+                    <div class="category-brands">
+                        <span>Philips</span>
+                        <span>Havells</span>
+                        <span>Crompton</span>
+                    </div>
+                </div>
+                <div class="brand-category-card" data-category="fans">
+                    <div class="category-icon">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <h3>Fan Brands</h3>
+                    <p>High-performance fans and cooling solutions</p>
+                    <div class="category-brands">
+                        <span>Havells</span>
+                        <span>Crompton</span>
+                        <span>Bajaj</span>
+                    </div>
+                </div>
+                <div class="brand-category-card" data-category="switches">
+                    <div class="category-icon">
+                        <i class="fas fa-toggle-on"></i>
+                    </div>
+                    <h3>Switch Brands</h3>
+                    <p>Reliable switches and electrical accessories</p>
+                    <div class="category-brands">
+                        <span>Legrand</span>
+                        <span>Anchor</span>
+                        <span>Havells</span>
+                    </div>
+                </div>
+                <div class="brand-category-card" data-category="wires">
+                    <div class="category-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Wire Brands</h3>
+                    <p>Quality wires and cables for all applications</p>
+                    <div class="category-brands">
+                        <span>Havells</span>
+                        <span>Anchor</span>
+                        <span>Polycab</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>Ragam Electricals</span>
+                    </div>
+                    <p>Your trusted partner for all electrical needs. We provide high-quality electrical products and solutions for homes and businesses.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=lighting">Lighting</a></li>
+                        <li><a href="products.html?category=fans">Fans & Appliances</a></li>
+                        <li><a href="products.html?category=switches">Switches & Sockets</a></li>
+                        <li><a href="products.html?category=wires">Wires & Cables</a></li>
+                        <li><a href="products.html?category=tools">Tools & Equipment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kulamada, Parippally</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9746478850</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>ragamelectricals@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 9AM - 7PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 Ragam Electricals. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="cart.js"></script>
+<script src="brands.js"></script>
+</body>
+</html>
